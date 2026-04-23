@@ -1,0 +1,22 @@
+# Build artifacts
+the_guard_body.pdf
+cover_guard.pdf
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Environment
+.env
+.venv/
