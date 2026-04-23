@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Guard - Technical Development Roadmap</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  @page {
+    size: 794px 1123px;
+    margin: 0;
+  }
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html, body {
+    margin: 0;
+    padding: 0;
+    width: 794px;
+    height: 1123px;
+    font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+    background: #ffffff;
+  }
+  @media screen {
+    html {
+      height: auto;
+      display: flex;
+      justify-content: center;
+    }
+    body {
+      transform-origin: top center;
+      scale: min(1, calc(100vh / 1123));
+      margin: 0 auto;
+    }
+  }
+  .cover {
+    position: absolute;
+    inset: 0;
+    width: 794px;
+    height: 1123px;
+  }
+
+  /* ── Layer 0: Background Fill ── */
+  .cover-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    background: #ffffff;
+  }
+
+  /* ── Layer 1: Background Decorations (clipped) ── */
+  .cover-layer-1 {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 1;
+  }
+
+  /* Grid pattern */
+  .grid-overlay {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(199, 40, 66, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(199, 40, 66, 0.03) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+
+  /* ── Layer 2: Structure Lines ── */
+  .cover-layer-2 {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+  }
+
+  /* Left anchor thick line */
+  .anchor-line {
+    position: absolute;
+    left: 95px;
+    top: 112px;
+    width: 6px;
+    height: 900px;
+    background: #c72842;
+    border-radius: 3px;
+  }
+
+  /* Meta separator line */
+  .meta-line {
+    position: absolute;
+    left: 125px;
+    top: 820px;
+    width: 280px;
+    height: 1px;
+    background: rgba(199, 40, 66, 0.4);
+  }
+
+  /* ── Layer 3: Text Content ── */
+  .cover-layer-3 {
+    position: absolute;
+    inset: 0;
+    z-index: 3;
+    padding: 0;
+  }
+
+  /* Content left edge */
+  .content-left {
+    position: absolute;
+    left: 125px;
+    top: 0;
+    width: 560px;
+    height: 1123px;
+  }
+
+  /* Kicker */
+  .kicker {
+    position: absolute;
+    top: 168px;
+    left: 0;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 4px;
+    color: rgba(25, 26, 27, 0.55);
+    text-transform: uppercase;
+  }
+
+  /* Hero Title */
+  .hero-title {
+    position: absolute;
+    top: 300px;
+    left: 0;
+    font-size: 58px;
+    font-weight: 900;
+    line-height: 1.1;
+    color: #191a1b;
+    letter-spacing: -1px;
+  }
+
+  /* Summary */
+  .summary {
+    position: absolute;
+    top: 510px;
+    left: 0;
+    width: 480px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.65;
+    color: rgba(25, 26, 27, 0.78);
+  }
+
+  /* Meta */
+  .meta {
+    position: absolute;
+    top: 838px;
+    left: 0;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(25, 26, 27, 0.65);
+  }
+
+  /* Footer */
+  .footer {
+    position: absolute;
+    bottom: 60px;
+    left: 125px;
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 3px;
+    color: rgba(25, 26, 27, 0.35);
+    text-transform: uppercase;
+  }
+</style>
+</head>
+<body>
+<div class="cover">
+  <!-- Layer 0: Background -->
+  <div class="cover-bg"></div>
+
+  <!-- Layer 1: Decorative (clipped) -->
+  <div class="cover-layer-1">
+    <div class="grid-overlay"></div>
+  </div>
+
+  <!-- Layer 2: Structure -->
+  <div class="cover-layer-2">
+    <div class="anchor-line"></div>
+    <div class="meta-line"></div>
+  </div>
+
+  <!-- Layer 3: Content -->
+  <div class="cover-layer-3">
+    <div class="content-left">
+      <div class="kicker">Technical Development Roadmap</div>
+      <div class="hero-title">The Guard<br>Personal<br>Safety AI</div>
+      <div class="summary">
+        A comprehensive technical blueprint for building an AI-powered personal safety
+        application that combines real-time computer vision with on-device large
+        language model reasoning to protect users in any situation.
+      </div>
+      <div class="meta">
+        Hybrid Mobile Architecture<br>
+        Flutter + YOLOv8 + Llama.cpp + LangChain<br>
+        Privacy-First Design
+      </div>
+    </div>
+    <div class="footer">April 2026</div>
+  </div>
+</div>
+</body>
+</html>
